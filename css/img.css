@@ -1,0 +1,23 @@
+#wrap #img_w {
+    margin-top: 50px;
+    float: left;
+    width: 70%;
+    margin-left: 15%;
+    height: 700px;
+    background-color: brown;
+    text-align: center;
+    position: relative;
+}
+#wrap #img_w img {
+    width: 100%;
+    height: 100%;
+}
+#wrap #img_w #mex {
+    position: absolute;
+    background-color: red;
+    top: 33%;
+    left: 9.5%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
