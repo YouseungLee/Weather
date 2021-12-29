@@ -30,6 +30,7 @@ html {
     width: 64px;
 }
 #wrap #updn svg {
+    z-index: 99;
     cursor: pointer;
     display: none;
 }

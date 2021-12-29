@@ -5,6 +5,7 @@
     height: 100px;
     background-color: #000;
     display: flex;
+    z-index: 99;
 }
 #head_w #logo {
     margin-left: 20px;
