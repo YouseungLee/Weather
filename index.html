@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/img.css">
+    <link rel="stylesheet" href="./css/modal.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <title>JBC - Weather News</title>
 </head>
 <body>
@@ -18,20 +20,80 @@
                 JBC Weather
             </div>
             <ul id="gnb">
-                <li><a href="#">World Map</a></li>
-                <li><a href="#">World Weather Conditions</a></li>
+                <li><a href="#img_title">World Map</a></li>
+                <li><a href="#">Weather Conditions</a></li>
                 <li><a href="#">Weather News</a></li>
             </ul>
         </header>
         <div id="blank"></div>
-        <div id="updn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16" id="up_btn" onclick="javascript:window.scrollTo(0,0)">
+
+        <div id="updn"> <!--위로 가는 버튼-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16" id="up_btn" onclick="javascript:window.scrollTo(0,0)" >
                 <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
             </svg>
         </div>
-        <div id="img_w">
+        <div id="img_title">Recent 'Ring of Fire' perceptual activity</div>
+        <div id="img_w"> <!--지도-->
             <img src="./img/world_map.png" alt="">
-            <div id="mex"></div>
+            <div id="mex" onclick="mexico()" class="dot"></div>
+            <div id="aus" onclick="aust()" class="dot"></div>
+            <div id="phili" onclick="phili()" class="dot"></div>
+            <div id="jap" onclick="jap()" class="dot"></div>
+        </div>
+
+        <div id="mexico_m" class="modal"> <!--모달창-->
+            <span id="close_modal" onclick="close_modal('mexico_m')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                    <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                </svg>     
+            </span>
+            <div id="m_cntnt">
+                4월 16일 18시 58분 (현지시간) <br>
+                <span>에콰도르 7.8 강진 후</span>  36차례 여진 246명 사망, 2500명 부상
+            </div>
+        </div>
+
+        <div id="aust_m" class="modal"> <!--모달창-->
+            <span id="close_modal" onclick="close_modal('aust_m')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                    <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                </svg>     
+            </span>
+            <div id="m_cntnt">
+                4월 17일 7시 38분 (현지시간) <br>
+                <span>통가 6.1 지진</span>
+            </div>
+        </div>
+
+        <div id="phili_m" class="modal"> <!--모달창-->
+            <span id="close_modal" onclick="close_modal('phili_m')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                    <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                </svg>     
+            </span>
+            <div id="m_cntnt">
+                4월 15일 <br>
+                <span>필리핀 만다나오 5.9</span>
+            </div>
+ 
+        </div>
+
+        <div id="jap_m" class="modal"> <!--모달창-->
+            <span id="close_modal" onclick="close_modal('jap_m')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                    <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                </svg>     
+            </span>
+            <div id="m_cntnt">
+                4월 14일 <br>
+                <span>일본 구마모토 6.5</span>  <br>
+                4월 16일 <br>
+                <span>일본 구마모토 7.3</span>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="./js/app.js"></script>

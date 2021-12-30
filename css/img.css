@@ -1,23 +1,62 @@
+#img_title {
+    margin-left: 39%; 
+    width: 25%;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #F9D142  ;
+    background-color: #292826;
+    border-radius: 5px;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Bebas Neue', cursive; 
+    box-shadow: 1px 1px 1px 1px gray;
+}
 #wrap #img_w {
-    margin-top: 50px;
+    margin-top: 20px;
     float: left;
     width: 70%;
     margin-left: 15%;
     height: 700px;
-    background-color: brown;
+    background-color: #292826;
     text-align: center;
     position: relative;
+    border-radius: 5px;
 }
 #wrap #img_w img {
-    width: 100%;
-    height: 100%;
+    padding-top: 2%;
+    width: 96%;
+    height: 96%;
+}
+#wrap #img_w .dot {
+    position: absolute;
+    background-color: #F9D142;
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+#wrap #img_w .dot:hover {
+    background-color: black;
 }
 #wrap #img_w #mex {
-    position: absolute;
-    background-color: red;
-    top: 33%;
-    left: 9.5%;
-    width: 20px;
-    height: 20px;
-    border-radius: 50px;
+    top: 50%;
+    left: 18%;
+}
+
+#wrap #img_w #aus {
+    top: 60%;
+    right: 8%;
+}
+#wrap #img_w #phili {
+    top: 42%;
+    right: 23%;
+}
+
+#wrap #img_w #jap {
+    top: 25%;
+    right: 20%;
 }
